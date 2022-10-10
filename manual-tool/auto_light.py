@@ -12,6 +12,7 @@ color_green = (0, 255, 0)
 color_blue = (0, 0, 255)
 color_yellow = (255, 255, 0)
 
+light.on(color_green)
 
 # Prepare OpenCV
 import cv2
