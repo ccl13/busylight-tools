@@ -4,8 +4,8 @@
 
 
 # Prepare busylight
-from busylight.lights.embrava import Blynclight
-light = Blynclight.first_light()
+from busylight.lights import Light
+light = Light.first_light()
 
 color_red = (255, 0, 0)
 color_green = (0, 255, 0)
@@ -71,5 +71,26 @@ def run(sc):
 
 s.enter(1, 1, run, (s,))
 s.run()
+
+
+
+def toggle_light_color():
+    light = blynclight.Blynclight()
+    current_color = light.get_color()
+    if current_color == 'red':
+        light.set_color('green')
+    else:
+        light.set_color('red')
+
+# Create a UI with one button to toggle the light's color
+import tkinter as tk
+
+root = tk.Tk()
+
+button = tk.Button(root, text="Toggle Light Color", command=toggle_light_color)
+button.pack()
+
+root.mainloop()
+
 
 releaseCam()

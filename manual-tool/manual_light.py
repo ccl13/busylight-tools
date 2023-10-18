@@ -1,9 +1,8 @@
 # PIP:
 # python3 -m pip install busylight-for-humans
 
-from busylight.lights.embrava import Blynclight
-
-light = Blynclight.first_light()
+from busylight.lights import Light
+light = Light.first_light()
 
 color_red = (255, 0, 0)
 color_green = (0, 255, 0)
